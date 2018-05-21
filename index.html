@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+
+  <title>Личный кабинет</title>
+
+<body>
+
+
+
+  <head>
+    <h1 class="my-settings-title" id="mine">Мои настройки</h1>
+  </head>
+
+  <main>
+    <section class="personal-info">
+      <h2 class="personal-info__title">Личные данные</h2>
+      <div class="personal-info__container">
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Имя</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" method="post" action="index.html" >
+              <input type="text" name="username" id="username">
+
+              <button class="form-buttom form-buttom--style" id="username" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Фамилия</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="text" name="usersurname" id="usersurname">
+
+              <button class="form-buttom form-buttom--style" id="usersurname" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Отчество</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="text" name="fathername" id="fathername">
+
+              <button class="form-buttom form-buttom--style" id="fathername" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+
+
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Дата рождения</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="datetime" name="birthday" id="date-mask" placeholder="дд. мм. гггг.">
+
+              <button class="form-buttom form-buttom--style" id="birthday" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button"  class="personal-info__button-change button-change--style" id="mine">Изменить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="personal-info contact-data">
+      <h2 class="personal-info__title">Контактные данные</h2>
+      <div class="personal-info__container">
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">+7 (___) -__ - __</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="text" name="phone" id="phone-mask">
+
+              <button class="form-buttom form-buttom--style" id="username" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Email</p>
+
+            <p class="personal-info__user-data"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="email" name="usersurname" id="email-mask">
+
+              <button class="form-buttom form-buttom--style" id="usersurname" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+
+        <div class="personal-info__color-js">
+          <div class="personal-info__item">
+            <p class="personal-info__default-data">Пароль [********]</p>
+
+            <p class="personal-info__user-data password-hide"></p>
+
+            <form class="form" action="data.php" method="post">
+              <input type="password" name="fathername" id="fathername">
+
+              <button class="form-buttom  form-buttom--style" id="fathername" type="submit">
+                Сохранить
+              </button>
+            </form>
+
+            <button type="button" class="personal-info__button-change button-change--style">Изменить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="personal-info address-data">
+      <h2 class="personal-info__title">Адресная книга</h2>
+      <div class="js-color-fix-add-address">
+        <div class="address-data__container">
+          <div class="address-subtitle__container">
+            <h3 class="addres__subtitle">Текущий адрес доставки</h3>
+            <button type="button" class="form-buttom--style-gray js-change-address">Изменить</button>
+            <button type="button" class="form-buttom--style-orange js-change-address-active">Готово</button>
+          </div>
+
+
+          <form action="" method="POST" class="radio-form">
+            <div class="form-item__container">
+              <input type="radio" id="address-select1" name="address-select">
+
+              <label for="address-select1" class="radio-info radio-info--style" ><p class="radio-info--style-default">432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54</p></label>
+
+              <button class="form-buttom--style-orange-del js-delete-address" id="fathername" type="button">
+                Удалить
+              </button>
+            </div>
+
+            <div class="form-item__container">
+              <input type="radio" id="address-select2" name="address-select">
+
+              <label for="address-select2" class="radio-info radio-info--style" ><p class="radio-info--style-default">432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54</p></label>
+
+              <button class="form-buttom--style-orange-del js-delete-address" id="fathername" type="button">
+                Удалить
+              </button>
+            </div>
+
+            <div class="form-item__container">
+              <input type="radio" id="address-select3" name="address-select">
+
+              <label for="address-select3" class="radio-info radio-info--style" ><p class="radio-info--style-default">445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6</p></label>
+
+              <button class="form-buttom--style-orange-del js-delete-address" id="fathername" type="button">
+                Удалить
+              </button>
+            </div>
+          </form>
+
+          <button class="add-address-button" id="" type="button">
+                Добавить еще один адрес
+              </button>
+        </div>
+      </div>
+
+      <div class="add-address-menu">
+        <h3 class="add-address-menu__title">Добавить адрес</h3>
+
+        <form action="" class="add-address-menu__form">
+          <input type="text" placeholder="Индекс" class="address-menu-form__index">
+
+          <select name="" class="address-menu-form__select">
+            <optgroup label="Страна">
+            <option>Страна</option>
+            <option>Россия</option>
+            <option>Россия</option>
+            <option>Россия</option>
+            <option>Россия</option>
+            <option>Россия</option>
+          </select>
+
+          <select name="" class="address-menu-form__select sity">
+            <optgroup label="Город">
+            <option>Город</option>
+            <option>Санкт-Петербург</option>
+            <option>Санкт-Петербург</option>
+            <option>Санкт-Петербург</option>
+            <option>Санкт-Петербург</option>
+            <option>Санкт-Петербург</option>
+          </select>
+
+          <input type="text" class="address-menu-form__address-text" value="Адрес">
+
+          <button class="add-address-menu__button" id="fathername" type="submit">
+              Добавить адрес
+            </button>
+
+        </form>
+      </div>
+      </section>
+
+
+      <section class="personal-info notice">
+        <h2 class="personal-info__title ">Подписки и уведомления</h2>
+
+        <form action="" method="POST" class="form-checkbox">
+          <div class="form-checkbox__container" >
+            <input type="checkbox" id="check" name="check" />
+            <label for="check"><p class="form-checkbox__label">Оповещеать меня о текущих акциях по e-mail</p></label>
+          </div>
+
+          <div class="form-checkbox__container">
+            <input type="checkbox" id="check1" name="check1" />
+            <label for="check1"><p class="form-checkbox__label">Оповещеать меня о текущих акциях по Sms</p></label>
+          </div>
+        </form>
+      </section>
+  </main>
+
+  <aside class="social-aside">
+    <h2 class="social-title">Социальные сети</h2>
+    <p class="social-description">Привяжите учетную запись социальной сети и используйте ee для входа</p>
+
+    <button class="social-connect facebook-button" type="button"><i class="facebook-icon"></i><p class="social-connect__inner">Facebook</p></button>
+
+    <button class="social-connect vk-button" type="button"><i class="vk-icon"></i><p class="social-connect__inner">Вконтакте</p></button>
+
+    <button class="social-connect twitter-button" type="button"><i class="twitter-icon"></i><p class="social-connect__inner">Twitter</p></button>
+
+    <button class="social-connect ok-button" type="button"><i class="ok-icon"></i><p class="social-connect__inner">Одноклассники</p></button>
+  </aside>
+
+
+  <script src="js/jQuery3.3.1.js"></script>
+  <script src="js/jquery.color.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
